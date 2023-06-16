@@ -1,0 +1,54 @@
+#property-search {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  background-color: #ffffff94;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  opacity: 0; /* Start with opacity 0 */
+  animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(20px); /* Move element 20px down */
+  }
+  100% {
+    opacity: 1; /* Fade in to full opacity */
+    transform: translateY(0); /* Move element back to its original position */
+  }
+}
+
+#property-search select,
+#property-search input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#property-search input::placeholder {
+  color: #999;
+}
+
+#property-search button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #745ae6;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#property-search button:hover {
+  background-color: #4530a1;
+}
